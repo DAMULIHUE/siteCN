@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz da abelha</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <h1>Quiz sobre Antibióticos e Resistência Bacteriana</h1>
+        <h3>by: Abelha</h3>
+    </header>
+
+    <main>
+        <div class="q q1">
+            <h2>Qual dos seguintes fatores contribui para o aumento da resistência bacteriana aos antibióticos?</h1>
+            <form>
+                <input id="op1" type="checkbox" onclick="escolhaUm('op1')">
+                <label for="op1">a) Uso excessivo de antibióticos na medicina veterinária</label><br>
+                <input id="op2" type="checkbox" onclick="escolhaUm('op2')">
+                <label for="op2">b) Uso indiscriminado de antibióticos em tratamentos médicos</label><br>
+                <input id="op3" type="checkbox" onclick="escolhaUm('op3')">
+                <label for="op3">c) Falta de saneamento básico em áreas urbanas</label><br>
+                <input id="op4" type="checkbox" onclick="escolhaUm('op4')">
+                <label for="op4">d) Todas as alternativas estão corretas</label><br>
+            </form>
+        </div>
+
+        <div class="q q2">
+            <h2>Antibióticos podem ser usados para tratar infecções virais, como a gripe.</h2>
+            <form>
+                <input id="v" type="checkbox" onclick="escolhaUm('v')">
+                <label for="v">Verdadeiro.</label><br>
+                <input id="f" type="checkbox" onclick="escolhaUm('f')">
+                <label for="f">Falso</label><br>
+            </form>
+        </div>
+
+        <div class="q q3">
+            <h2>A resistência bacteriana ocorre quando as 
+                bactérias se adaptam para sobreviver a 
+                <input id="resQ3" type="text"> tornando o tratamento de infecções 
+                mais difícil.</h2>
+
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
