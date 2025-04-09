@@ -21,5 +21,7 @@ input[type='text']{
     text-align:center;
     border-top: 0px;
     border-left: 0px;
-    border-right: 0px
+    border-right: 0px;
+    border-bottom-width: 0.5vw;
+    border-color: red;
 }

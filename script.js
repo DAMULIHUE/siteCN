@@ -4,10 +4,8 @@ function escolhaUm(opx){
     let box2 = "op2";
     let box3 = "op3";
     let box4 = "op4";
-    let boxf = 'f';
-    let boxv = 'v'
 
-    let arrBoxes=[box1, box2, box3, box4, boxv, boxf];
+    let arrBoxes=[box1, box2, box3, box4,];
 
     arrBoxes.forEach(element => {
         if(opx != element){
@@ -16,3 +14,16 @@ function escolhaUm(opx){
     });
 }
 
+
+function escolhaUmDois(opx){
+    let boxf = 'f';
+    let boxv = 'v';
+
+    let arrBoxes = [boxf, boxv];
+
+    arrBoxes.forEach(element => {
+        if(opx != element){
+            document.getElementById(element).checked = false;
+        }
+    });
+}

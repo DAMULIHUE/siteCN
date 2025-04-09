@@ -13,7 +13,7 @@
     </header>
 
     <main>
-        <div class="q q1">
+        <div class="q q1" id="q1" onclick="clickOnDiv1 = 1">
             <h2>Qual dos seguintes fatores contribui para o aumento da resistência bacteriana aos antibióticos?</h1>
             <form>
                 <input id="op1" type="checkbox" onclick="escolhaUm('op1')">
@@ -27,17 +27,17 @@
             </form>
         </div>
 
-        <div class="q q2">
+        <div class="q q2" id="q2">
             <h2>Antibióticos podem ser usados para tratar infecções virais, como a gripe.</h2>
             <form>
-                <input id="v" type="checkbox" onclick="escolhaUm('v')">
+                <input id="v" type="checkbox" onclick="escolhaUmDois('v')">
                 <label for="v">Verdadeiro.</label><br>
-                <input id="f" type="checkbox" onclick="escolhaUm('f')">
+                <input id="f" type="checkbox" onclick="escolhaUmDois('f')">
                 <label for="f">Falso</label><br>
             </form>
         </div>
 
-        <div class="q q3">
+        <div class="q q3" id="q3">
             <h2>A resistência bacteriana ocorre quando as 
                 bactérias se adaptam para sobreviver a 
                 <input id="resQ3" type="text"> tornando o tratamento de infecções 
