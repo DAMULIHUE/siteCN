@@ -27,3 +27,31 @@ function escolhaUmDois(opx){
         }
     });
 }
+
+function nextDiv(divAtual){
+    //jeito cringe
+    /*document.getElementById("homepage").style.visibility = "hidden";
+    document.getElementById("homepage").style.display = "none";
+
+    document.getElementById("q1").style.visibility = "visible"
+    document.getElementById("q1").style.display = "flex";*/
+
+    if(divAtual == 'homepage'){
+        document.getElementById(divAtual).style.visibility = "hidden";
+        document.getElementById(divAtual).style.display = "none";
+
+        document.getElementById("q1").style.visibility = "visible"
+        document.getElementById("q1").style.display = "flex";
+    }else{
+        // transforma em array para podermos retirar o 'q'
+        let qx = divAtual.split("").filter(element => element != 'q');
+        let qNumber = Number(qx);
+        let nextq = `q${++qNumber}`;
+        
+        document.getElementById(divAtual).style.visibility = 'hidden';
+        document.getElementById(divAtual).style.display = 'none';
+
+        document.getElementById(nextq).style.visibility = 'visible';
+        document.getElementById(nextq).style.display = 'flex';
+    }
+}

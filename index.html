@@ -9,10 +9,16 @@
 <body>
     <header class="header">
         <h1>Quiz sobre Antibióticos e Resistência Bacteriana</h1>
-        <h3>by: Abelha</h3>
+        <img class="logoAedpedroiv" src="./imagens/logoAedpedroiv.png">
     </header>
 
     <main>
+        <div id="homepage" class="homepage">
+            <button id="startButton" onclick="nextDiv('homepage')">
+                Clique Para Começar :D
+            </button>
+        </div>
+
         <div class="q q1" id="q1" onclick="clickOnDiv1 = 1">
             <h2>Qual dos seguintes fatores contribui para o aumento da resistência bacteriana aos antibióticos?</h1>
             <form>
@@ -25,6 +31,9 @@
                 <input id="op4" type="checkbox" onclick="escolhaUm('op4')">
                 <label for="op4">d) Todas as alternativas estão corretas</label><br>
             </form>
+            <button id="startButton" onclick="nextDiv('q1')">
+                Clique Para Começar :D
+            </button>
         </div>
 
         <div class="q q2" id="q2">
