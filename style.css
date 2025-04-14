@@ -4,10 +4,10 @@ body {
 
 .header {
     border: 0px solid;
-    /*border-bottom-left-radius: 50px;
+    border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
-    background-color: #0906FA;*/
-    background-image: linear-gradient(to bottom, #0906FA, white);
+    background-color: #0906FA;
+    /*background-image: linear-gradient(to bottom, #0906FA, white);*/
     color: white;
     text-align: center;
 }
@@ -47,6 +47,7 @@ body {
     border: 0px solid white;
     border-radius: 10px;
 
+    margin-left: 10px;
     margin-right: 10px;
 }
 
@@ -102,10 +103,13 @@ input[type='text']{
     .title {
         font-size: 1.5rem;
         text-align: center;
+
+        width:60%;
     }
     
     .logoAedpedroiv {
         position:static;
+        margin-left: 15px;
     }
     
 }
