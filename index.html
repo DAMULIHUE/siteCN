@@ -13,16 +13,28 @@
             <img class="logoAedpedroiv" src="./imagens/logoAedpedroiv.png">
         </div>
         <div id="q1Header" class="qHeader q1Header">
-            <h2>Qual dos seguintes fatores contribui 
-                para o aumento da resistência bacteriana 
-                aos antibióticos?</h1>
+            <h2>O que são antibióticos e como atuam no
+                organismo?</h1>
         </div>
         <div id="q2Header" class="qHeader q2Header">
-            <h2>Antibióticos podem ser usados para tratar
-                 infecções virais, como a gripe.</h2>
+            <h2>Antibióticos são eficazes tanto contra 
+                bactérias quanto contra vírus.</h2>
         </div>
         <div id="q3Header" class="qHeader q3Header">
-            <h2>Complete a frase a seguir:</h2>
+            <h2>Cite duas doenças causadas por bactérias 
+                patogênicas e os agentes que as causam.</h2>
+        </div>
+        <div id="q4Header" class="qHeader q4Header">
+            <h1 class="title">Qual das alternativas a seguir 
+                contribui para o aumento da resistência bacteriana?</h1>
+        </div>
+        <div id="q5Header" class="qHeader q5Header">
+            <h1 class="title">Explique o que é resistência bacteriana 
+                e por que ela é um problema para a saúde pública.</h1>
+        </div>
+        <div id="q6Header" class="qHeader q6Header">
+            <h1 class="title">Aqui estão as suas respostas em 
+                comparação com as respostas certas: </h1>
         </div>
     </header>
 
@@ -33,17 +45,27 @@
             </button>
         </div>
 
-        <div class="q q1" id="q1" onclick="clickOnDiv1 = 1">
+        <div class="q q1" id="q1">
             <form>
                 <input id="op1" type="checkbox" onclick="escolhaUm('op1')">
-                <label for="op1">a) Uso excessivo de antibióticos na medicina veterinária</label><br>
+                <label for="op1">a) São vitaminas que fortalecem
+                    o sistema imune.
+                </label><br>
+            
                 <input id="op2" type="checkbox" onclick="escolhaUm('op2')">
-                <label for="op2">b) Uso indiscriminado de antibióticos em tratamentos médicos</label><br>
+                <label for="op2">b) São substâncias que matam ou 
+                    inibem o crescimento de bactérias.</label><br>
+            
                 <input id="op3" type="checkbox" onclick="escolhaUm('op3')">
-                <label for="op3">c) Falta de saneamento básico em áreas urbanas</label><br>
+                <label for="op3">c) São medicamentos que 
+                    eliminam todos os tipos de vírus.</label><br>
+            
                 <input id="op4" type="checkbox" onclick="escolhaUm('op4')">
-                <label for="op4">d) Todas as alternativas estão corretas</label><br>
+                <label for="op4">d) São hormônios que 
+                    combatem infecções fúngicas.</label><br>
             </form>
+            
+
             <button id="startButton" onclick="nextDiv('q1')">
                 Clique Para Avançar
             </button>
@@ -51,25 +73,59 @@
 
         <div class="q q2" id="q2">
             <form>
-                <input id="v" type="checkbox" onclick="escolhaUmDois('v')">
-                <label for="v">Verdadeiro.</label><br>
-                <input id="f" type="checkbox" onclick="escolhaUmDois('f')">
-                <label for="f">Falso</label><br>
+                <input id="v" type="checkbox" onclick="escolhaUm('v')">
+                <label for="v"> Verdadeiro. </label><br>
+                <input id="f" type="checkbox" onclick="escolhaUm('f')">
+                <label for="f">Falso. </label><br>
             </form>
 
             <button id="startButton" onclick="nextDiv('q2')">
-                Clique para Avançar
+                Clique Para Avançar
             </button>
         </div>
 
         <div class="q q3" id="q3">
-            <h2>A resistência bacteriana ocorre quando as 
-                bactérias se adaptam para sobreviver a 
-                <input id="resQ3" type="text"> tornando o tratamento de infecções 
-                mais difícil.</h2>
+            <h2><input id="resQ3" type="text" oninput="getInputText('resQ3')"></h2>
+            <button id="startButton" onclick="nextDiv('q3')">
+                Clique Para Avançar
+            </button>
         </div>
 
-        
+        <div class="q q4" id="q4">
+            <form>
+                <input id="op5" type="checkbox" onclick="escolhaUm('op5')">
+                <label for="op5">a) Uso de antibióticos apenas 
+                    com prescrição médica.</label><br>
+            
+                <input id="op6" type="checkbox" onclick="escolhaUm('op6')">
+                <label for="op6">b)  Uso correto e completo do 
+                    tratamento.</label><br>
+            
+                <input id="op7" type="checkbox" onclick="escolhaUm('op7')">
+                <label for="op7">c) Uso de antibióticos sem 
+                    necessidade ou por tempo inadequado.</label><br>
+                    
+                <input id="op8" type="checkbox" onclick="escolhaUm('op8')">
+                <label for="op8">d) Vacinação contra doenças 
+                    bacterianas.</label><br>
+            </form>
+            
+
+            <button id="startButton" onclick="nextDiv('q4')">
+                Clique Para Avançar
+            </button>
+        </div>
+
+        <div class="q q5" id="q5">
+            <h2><input id="resQ5" type="text" oninput="getInputText('resQ5')"></h2>
+            <button id="startButton" onclick="nextDiv('q5')">
+                Clique Para Avançar
+            </button>
+        </div>
+
+        <div class="q q6 resultados" id="q6">
+
+        </div>
     </main>
 
     <footer>

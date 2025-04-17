@@ -81,12 +81,57 @@ body {
     font-size: 1rem;
 
     margin: 15px;
-}
-/* tutorial rapido e pratico de esconder div ~~~~UwU~~~~*/
-.q1, .q2, .q3{
+
     visibility: hidden;
     display: none;
 }
+
+label {
+    display: block;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+input[type="checkbox"] {
+    visibility: hidden;
+    display: none;
+}
+
+/* Add green border when the checkbox right before the label is checked */
+input[type="checkbox"]:checked + label {
+    border-color: green;
+}
+
+/*
+label {
+    display: block;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+input[type="checkbox"]:checked + span {
+    font-weight: bold;
+}
+
+input[type="checkbox"]:checked ~ label {
+    background-color: #d0f0d0;
+    border-color: #5cb85c;
+}*/
+
+/* tutorial rapido e pratico de esconder div ~~~~UwU~~~~*/
 
 input[type='text']{
     font-size: 1rem;
@@ -96,6 +141,8 @@ input[type='text']{
     border-right: 0px;
     border-bottom-width: 0.5vw;
     border-color: red;
+
+    width:100%;
 }
 
 @media(max-width:900px){
