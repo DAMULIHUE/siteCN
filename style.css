@@ -51,8 +51,6 @@ body {
     margin-right: 10px;
 }
 
-
-
 #startButton{
     position: fixed;
     bottom:0;
@@ -86,6 +84,51 @@ body {
     display: none;
 }
 
+.q6 {
+  max-width: 700px;
+  background: #fff;
+  color: #222;
+}
+
+.q6 h3 {
+  margin-top: 25px;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #004080;
+  border-bottom: 2px solid #cce4ff;
+  padding-bottom: 4px;
+}
+
+.q6 p {
+  margin: 6px 0 12px 0;
+}
+
+/* Verde para certo */
+.q6 p[style*="color: green"] {
+  color: #2e7d32;
+  font-weight: 600;
+}
+
+/* Vermelho para errado */
+.q6 p[style*="color: red"] {
+  color: #c62828;
+  font-weight: 600;
+}
+
+/* Texto normal */
+.q6 p:not([style]) {
+  color: #333;
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* Esconde o radio padrão */
+input[type="radio"] {
+    display: none;
+    visibility: hidden;
+}
+
+/* Estiliza o label para ficar como “botão” customizado */
 label {
     display: block;
     border: 2px solid #ccc;
@@ -94,44 +137,23 @@ label {
     font-size: 1.5rem;
     margin-bottom: 10px;
     cursor: pointer;
-    transition: border-color 0.3s;
+    transition: border-color 0.3s, background-color 0.3s;
+    user-select: none;
 }
 
-input[type="checkbox"] {
-    visibility: hidden;
-    display: none;
-}
-
-/* Add green border when the checkbox right before the label is checked */
-input[type="checkbox"]:checked + label {
+/* Quando o radio correspondente estiver marcado, estiliza o label */
+input[type="radio"]:checked + label {
     border-color: green;
+    background-color: #d0f8d0;
+    font-weight: 600;
 }
 
-/*
-label {
-    display: block;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-    padding: 12px;
-    margin-bottom: 10px;
-    cursor: pointer;
-    transition: background-color 0.2s, border-color 0.2s;
+/* Efeito hover nos labels (não marcado) */
+label:hover {
+    border-color: #0906FA;
+    background-color: #f0f8ff;
 }
 
-input[type="checkbox"] {
-    margin-right: 10px;
-}
-
-input[type="checkbox"]:checked + span {
-    font-weight: bold;
-}
-
-input[type="checkbox"]:checked ~ label {
-    background-color: #d0f0d0;
-    border-color: #5cb85c;
-}*/
-
-/* tutorial rapido e pratico de esconder div ~~~~UwU~~~~*/
 
 input[type='text']{
     font-size: 1rem;
@@ -144,6 +166,7 @@ input[type='text']{
 
     width:100%;
 }
+
 
 @media(max-width:900px){
 
@@ -160,3 +183,4 @@ input[type='text']{
     }
     
 }
+

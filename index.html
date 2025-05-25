@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz da abelha</title>
+    <title>Quiz de Ciências</title>
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
@@ -45,87 +45,72 @@
             </button>
         </div>
 
-        <div class="q q1" id="q1">
-            <form>
-                <input id="op1" type="checkbox" onclick="escolhaUm('op1')">
-                <label for="op1">a) São vitaminas que fortalecem
-                    o sistema imune.
-                </label><br>
-            
-                <input id="op2" type="checkbox" onclick="escolhaUm('op2')">
-                <label for="op2">b) São substâncias que matam ou 
-                    inibem o crescimento de bactérias.</label><br>
-            
-                <input id="op3" type="checkbox" onclick="escolhaUm('op3')">
-                <label for="op3">c) São medicamentos que 
-                    eliminam todos os tipos de vírus.</label><br>
-            
-                <input id="op4" type="checkbox" onclick="escolhaUm('op4')">
-                <label for="op4">d) São hormônios que 
-                    combatem infecções fúngicas.</label><br>
-            </form>
-            
+        <!-- Pergunta 1 -->
+<div class="q q1" id="q1" style="display:none; flex-direction: column;">
+  <form>
+    <input id="op1" type="radio" name="q1">
+    <label for="op1">a) São vitaminas que fortalecem o sistema imune.</label><br>
 
-            <button id="startButton" onclick="nextDiv('q1')">
-                Clique Para Avançar
-            </button>
-        </div>
+    <input id="op2" type="radio" name="q1">
+    <label for="op2">b) São substâncias que matam ou inibem o crescimento de bactérias.</label><br>
 
-        <div class="q q2" id="q2">
-            <form>
-                <input id="v" type="checkbox" onclick="escolhaUm('v')">
-                <label for="v"> Verdadeiro. </label><br>
-                <input id="f" type="checkbox" onclick="escolhaUm('f')">
-                <label for="f">Falso. </label><br>
-            </form>
+    <input id="op3" type="radio" name="q1">
+    <label for="op3">c) São medicamentos que eliminam todos os tipos de vírus.</label><br>
 
-            <button id="startButton" onclick="nextDiv('q2')">
-                Clique Para Avançar
-            </button>
-        </div>
+    <input id="op4" type="radio" name="q1">
+    <label for="op4">d) São hormônios que combatem infecções fúngicas.</label><br>
+  </form>
+  <button id="startButton" onclick="nextDiv('q1')">Clique Para Avançar</button>
+</div>
 
-        <div class="q q3" id="q3">
-            <h2><input id="resQ3" type="text" oninput="getInputText('resQ3')"></h2>
-            <button id="startButton" onclick="nextDiv('q3')">
-                Clique Para Avançar
-            </button>
-        </div>
+<!-- Pergunta 2 -->
+<div class="q q2" id="q2" style="display:none; flex-direction: column;">
+  <form>
+    <input id="v" type="radio" name="q2">
+    <label for="v">Verdadeiro.</label><br>
 
-        <div class="q q4" id="q4">
-            <form>
-                <input id="op5" type="checkbox" onclick="escolhaUm('op5')">
-                <label for="op5">a) Uso de antibióticos apenas 
-                    com prescrição médica.</label><br>
-            
-                <input id="op6" type="checkbox" onclick="escolhaUm('op6')">
-                <label for="op6">b)  Uso correto e completo do 
-                    tratamento.</label><br>
-            
-                <input id="op7" type="checkbox" onclick="escolhaUm('op7')">
-                <label for="op7">c) Uso de antibióticos sem 
-                    necessidade ou por tempo inadequado.</label><br>
-                    
-                <input id="op8" type="checkbox" onclick="escolhaUm('op8')">
-                <label for="op8">d) Vacinação contra doenças 
-                    bacterianas.</label><br>
-            </form>
-            
+    <input id="f" type="radio" name="q2">
+    <label for="f">Falso.</label><br>
+  </form>
+  <button id="startButton"onclick="nextDiv('q2')">Clique Para Avançar</button>
+</div>
 
-            <button id="startButton" onclick="nextDiv('q4')">
-                Clique Para Avançar
-            </button>
-        </div>
+<!-- Pergunta 3 (input aberto) -->
+<div class="q q3" id="q3" style="display:none; flex-direction: column;">
+  <input id="resQ3" type="text" placeholder="Sua resposta aqui..." oninput="getInputText('resQ3')">
+  <button id="startButton" onclick="nextDiv('q3')">Clique Para Avançar</button>
+</div>
 
-        <div class="q q5" id="q5">
-            <h2><input id="resQ5" type="text" oninput="getInputText('resQ5')"></h2>
-            <button id="startButton" onclick="nextDiv('q5')">
-                Clique Para Avançar
-            </button>
-        </div>
+<!-- Pergunta 4 -->
+<div class="q q4" id="q4" style="display:none; flex-direction: column;">
+  <form>
+    <input id="op5" type="radio" name="q4">
+    <label for="op5">a) Uso de antibióticos apenas com prescrição médica.</label><br>
 
-        <div class="q q6 resultados" id="q6">
+    <input id="op6" type="radio" name="q4">
+    <label for="op6">b) Uso correto e completo do tratamento.</label><br>
 
-        </div>
+    <input id="op7" type="radio" name="q4">
+    <label for="op7">c) Uso de antibióticos sem necessidade ou por tempo inadequado.</label><br>
+
+    <input id="op8" type="radio" name="q4">
+    <label for="op8">d) Vacinação contra doenças bacterianas.</label><br>
+  </form>
+     <button id="startButton" onclick="nextDiv('q4')">Clique Para Avançar</button>
+    </div>
+
+    <!-- Pergunta 5 (input aberto) -->
+    <div class="q q5" id="q5" style="display:none; flex-direction: column;">
+    <input id="resQ5" type="text" placeholder="Sua resposta aqui..." oninput="getInputText('resQ5')">
+    <button id="startButton" onclick="nextDiv('q5'); mostrarResultados();">Clique Para Avançar</button>
+    </div>
+
+    <!-- Resultados -->
+    <div class="q6" id="q6" style="display:none; flex-direction: column; max-width: 800px; margin: 20px auto;">
+    <!-- Resultados aparecerão aqui -->
+        <button id="startButton" onclick="reiniciarQuiz();">Clique Para Reiniciar</button>
+    </div>
+
     </main>
 
     <footer>
@@ -133,5 +118,17 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        window.onload = function() {
+            const inputs = document.querySelectorAll('input[type="radio"], input[type="checkbox"], input[type="text"]');
+            inputs.forEach(input => {
+                if(input.type === "text") {
+                input.value = "";
+                } else {
+                input.checked = false;
+                }
+        });
+    }
+    </script>
 </body>
 </html>

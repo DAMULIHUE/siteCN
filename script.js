@@ -78,7 +78,68 @@ function nextDiv(divAtual){
         respostas.push(opAtual);
         console.log(opAtual);
     }
+}
 
-    
+function mostrarResultados() {
+  const resultadosDiv = document.querySelector('.q6');
+  //resultadosDiv.innerHTML = ''; // limpa antes de mostrar
+
+  // Q1
+  const corretaQ1 = "op2";
+  const selecionadaQ1 = document.querySelector('input[name="q1"]:checked') || document.querySelector('input#' + corretaQ1)?.closest('form')?.querySelector('input:checked');
+  const marcadoQ1 = selecionadaQ1 ? selecionadaQ1.id : null;
+
+  resultadosDiv.innerHTML += `<h3>Pergunta 1:</h3>`;
+  if (marcadoQ1 === corretaQ1) {
+    resultadosDiv.innerHTML += `<p style="color: green;">✔️ Resposta correta: b) São substâncias que matam ou inibem o crescimento de bactérias.</p>`;
+  } else {
+    resultadosDiv.innerHTML += `<p style="color: red;">❌ Resposta incorreta.</p>`;
+    if (marcadoQ1)
+      resultadosDiv.innerHTML += `<p>Você respondeu: ${document.querySelector('label[for="' + marcadoQ1 + '"]').innerText}</p>`;
+    resultadosDiv.innerHTML += `<p>Resposta correta: b) São substâncias que matam ou inibem o crescimento de bactérias.</p>`;
+  }
+
+  // Q2
+  const corretaQ2 = "f";
+  const marcadaQ2 = document.querySelector('#v').checked ? 'v' :
+                    document.querySelector('#f').checked ? 'f' : null;
+
+  resultadosDiv.innerHTML += `<h3>Pergunta 2:</h3>`;
+  if (marcadaQ2 === corretaQ2) {
+    resultadosDiv.innerHTML += `<p style="color: green;">✔️ Resposta correta: Falso.</p>`;
+  } else {
+    resultadosDiv.innerHTML += `<p style="color: red;">❌ Resposta incorreta.</p>`;
+    if (marcadaQ2)
+      resultadosDiv.innerHTML += `<p>Você respondeu: ${document.querySelector('label[for="' + marcadaQ2 + '"]').innerText}</p>`;
+    resultadosDiv.innerHTML += `<p>Resposta correta: Falso.</p>`;
+  }
+
+  // Q3 e Q5 são abertas, não têm resposta certa automática
+  const q3resposta = document.getElementById('resQ3').value.trim();
+  resultadosDiv.innerHTML += `<h3>Pergunta 3:</h3><p>Sua resposta: ${q3resposta || "Não respondido"}</p>`;
+  resultadosDiv.innerHTML += `<p>Exemplo de resposta esperada: Tuberculose (Mycobacterium tuberculosis), Meningite (Neisseria meningitidis)</p>`;
+
+  // Q4
+  const corretaQ4 = "op7";
+  const marcadaQ4 = ["op5", "op6", "op7", "op8"].find(id => document.getElementById(id).checked);
+
+  resultadosDiv.innerHTML += `<h3>Pergunta 4:</h3>`;
+  if (marcadaQ4 === corretaQ4) {
+    resultadosDiv.innerHTML += `<p style="color: green;">✔️ Resposta correta: c) Uso de antibióticos sem necessidade ou por tempo inadequado.</p>`;
+  } else {
+    resultadosDiv.innerHTML += `<p style="color: red;">❌ Resposta incorreta.</p>`;
+    if (marcadaQ4)
+      resultadosDiv.innerHTML += `<p>Você respondeu: ${document.querySelector('label[for="' + marcadaQ4 + '"]').innerText}</p>`;
+    resultadosDiv.innerHTML += `<p>Resposta correta: c) Uso de antibióticos sem necessidade ou por tempo inadequado.</p>`;
+  }
+
+  // Q5 aberta
+  const q5resposta = document.getElementById('resQ5').value.trim();
+  resultadosDiv.innerHTML += `<h3>Pergunta 5:</h3><p>Sua resposta: ${q5resposta || "Não respondido"}</p>`;
+  resultadosDiv.innerHTML += `<p>Explicação esperada: Resistência bacteriana é a capacidade de bactérias resistirem aos efeitos de antibióticos, tornando tratamentos ineficazes e dificultando o controle de infecções.</p>`;
+}
+
+function reiniciarQuiz() {
+    window.location.reload();
 }
 
