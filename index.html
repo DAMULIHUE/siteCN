@@ -75,9 +75,21 @@
   <button id="startButton"onclick="nextDiv('q2')">Clique Para Avançar</button>
 </div>
 
-<!-- Pergunta 3 (input aberto) -->
+<!-- Pergunta 3 -->
 <div class="q q3" id="q3" style="display:none; flex-direction: column;">
-  <input id="resQ3" type="text" placeholder="Sua resposta aqui..." oninput="getInputText('resQ3')">
+  <form>
+    <input id="op9" type="radio" name="q3">
+    <label for="op9">a) Tuberculose - <em>Mycobacterium tuberculosis</em> e Cólera - </em>Vibrio cholerae</em>.</label><br>
+
+    <input id="op10" type="radio" name="q3">
+    <label for="op10">b) Câncer - Células mutadas e Gripe - Vírus influenza.</label><br>
+
+    <input id="op11" type="radio" name="q3">
+    <label for="op11">c) Dengue - Vírus da dengue e AIDS - HIV.</label><br>
+
+    <input id="op12" type="radio" name="q3">
+    <label for="op12">d) Catapora - Vírus varicela-zóster e Sarampo - Vírus do sarampo.</label><br>
+  </form>
   <button id="startButton" onclick="nextDiv('q3')">Clique Para Avançar</button>
 </div>
 
@@ -99,11 +111,23 @@
      <button id="startButton" onclick="nextDiv('q4')">Clique Para Avançar</button>
     </div>
 
-    <!-- Pergunta 5 (input aberto) -->
+    <!-- Pergunta 5 -->
     <div class="q q5" id="q5" style="display:none; flex-direction: column;">
-    <input id="resQ5" type="text" placeholder="Sua resposta aqui..." oninput="getInputText('resQ5')">
-    <button id="startButton" onclick="nextDiv('q5'); mostrarResultados();">Clique Para Avançar</button>
-    </div>
+  <form>
+    <input id="op13" type="radio" name="q5">
+    <label for="op13">a) Resistência bacteriana ocorre quando as vacinas não são eficazes contra bactérias.</label><br>
+
+    <input id="op14" type="radio" name="q5">
+    <label for="op14">b) Resistência bacteriana é o fortalecimento do sistema imunológico contra infecções.</label><br>
+
+    <input id="op15" type="radio" name="q5">
+    <label for="op15">c) Resistência bacteriana é quando as bactérias desenvolvem mecanismos para sobreviver aos antibióticos, dificultando o tratamento de infecções.</label><br>
+
+    <input id="op16" type="radio" name="q5">
+    <label for="op16">d) Resistência bacteriana é o uso de antibióticos para combater vírus e fungos.</label><br>
+  </form>
+  <button id="startButton" onclick="nextDiv('q5'); mostrarResultados();">Clique Para Avançar</button>
+</div>
 
     <!-- Resultados -->
     <div class="q6" id="q6" style="display:none; flex-direction: column; max-width: 800px; margin: 20px auto;">

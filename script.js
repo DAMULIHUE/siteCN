@@ -114,10 +114,20 @@ function mostrarResultados() {
     resultadosDiv.innerHTML += `<p>Resposta correta: Falso.</p>`;
   }
 
-  // Q3 e Q5 são abertas, não têm resposta certa automática
-  const q3resposta = document.getElementById('resQ3').value.trim();
-  resultadosDiv.innerHTML += `<h3>Pergunta 3:</h3><p>Sua resposta: ${q3resposta || "Não respondido"}</p>`;
-  resultadosDiv.innerHTML += `<p>Exemplo de resposta esperada: Tuberculose (Mycobacterium tuberculosis), Meningite (Neisseria meningitidis)</p>`;
+  // Q3
+  const corretaQ3 = "op9"; // Você pode mudar essa resposta depois
+  const marcadaQ3 = ["op9", "op10", "op11", "op12"].find(id => document.getElementById(id).checked);
+
+  resultadosDiv.innerHTML += `<h3>Pergunta 3:</h3>`;
+  if (marcadaQ3 === corretaQ3) {
+    resultadosDiv.innerHTML += `<p style="color: green;">✔️ Resposta correta: ${document.querySelector('label[for="' + corretaQ3 + '"]').innerText}</p>`;
+  } else {
+    resultadosDiv.innerHTML += `<p style="color: red;">❌ Resposta incorreta.</p>`;
+    if (marcadaQ3)
+      resultadosDiv.innerHTML += `<p>Você respondeu: ${document.querySelector('label[for="' + marcadaQ3 + '"]').innerText}</p>`;
+    resultadosDiv.innerHTML += `<p>Resposta correta: ${document.querySelector('label[for="' + corretaQ3 + '"]').innerText}</p>`;
+  }
+
 
   // Q4
   const corretaQ4 = "op7";
@@ -133,10 +143,19 @@ function mostrarResultados() {
     resultadosDiv.innerHTML += `<p>Resposta correta: c) Uso de antibióticos sem necessidade ou por tempo inadequado.</p>`;
   }
 
-  // Q5 aberta
-  const q5resposta = document.getElementById('resQ5').value.trim();
-  resultadosDiv.innerHTML += `<h3>Pergunta 5:</h3><p>Sua resposta: ${q5resposta || "Não respondido"}</p>`;
-  resultadosDiv.innerHTML += `<p>Explicação esperada: Resistência bacteriana é a capacidade de bactérias resistirem aos efeitos de antibióticos, tornando tratamentos ineficazes e dificultando o controle de infecções.</p>`;
+  // Q5 
+  const corretaQ5 = "op15"; // Você pode mudar essa resposta depois
+  const marcadaQ5 = ["op13", "op14", "op15", "op16"].find(id => document.getElementById(id).checked);
+
+  resultadosDiv.innerHTML += `<h3>Pergunta 5:</h3>`;
+  if (marcadaQ3 === corretaQ3) {
+    resultadosDiv.innerHTML += `<p style="color: green;">✔️ Resposta correta: ${document.querySelector('label[for="' + corretaQ5 + '"]').innerText}</p>`;
+  } else {
+    resultadosDiv.innerHTML += `<p style="color: red;">❌ Resposta incorreta.</p>`;
+    if (marcadaQ3)
+      resultadosDiv.innerHTML += `<p>Você respondeu: ${document.querySelector('label[for="' + marcadaQ3 + '"]').innerText}</p>`;
+    resultadosDiv.innerHTML += `<p>Resposta correta: ${document.querySelector('label[for="' + corretaQ3 + '"]').innerText}</p>`;
+  }
 }
 
 function reiniciarQuiz() {
